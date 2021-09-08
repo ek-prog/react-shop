@@ -40,9 +40,7 @@ function BasketList(props) {
                     ) : (
                         <li >Корзина пуста</li>
                     )}
-                    <li>
-                        Общая стоимость: {totalPrice} руб.
-                    </li>
+                    <li>Общая стоимость: {totalPrice} руб.</li>
                     </ul>
                 </div>
                 <div className="modal-footer">

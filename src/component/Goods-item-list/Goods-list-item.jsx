@@ -11,7 +11,10 @@ function GoodsListItem(props){
     } = props;
     return(
     <div className="card">
-        <img src={full_background} className="cart-img"  alt={name} />
+
+            <img src={full_background} className="cart-img" alt={name}/>
+
+
             <div className="card-body">
                 <h5 className="card-title">{name}</h5>
                 <p className="card-text">{description}</p>

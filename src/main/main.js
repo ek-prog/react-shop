@@ -81,9 +81,11 @@ function Main(){
     const handleBasketShow = () => {
         setBasketSow(!isBasketShow);
     };
+
     const closeAlert = () => {
         setAlertName('');
     };
+
 
     useEffect(function getGoods() {
         fetch(API_URL, {

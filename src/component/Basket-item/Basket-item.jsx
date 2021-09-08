@@ -16,30 +16,21 @@ function BasketItem(props) {
             {name}{' '}
 
 
-            <i
-                className='bi bi-dash-square'
-                onClick={() => decQuantity(id)}
-            >
+            <i className='bi bi-dash-square' onClick={() => decQuantity(id)}>
                 {/*REMOVE*/}
             </i>{' '}
             x{quantity}{' '}
 
 
 
-            <i
-                className='bi bi-plus-square'
-                onClick={() => incQuantity(id)}
-            >
+            <i className='bi bi-plus-square' onClick={() => incQuantity(id)}>
                 {/*ADD*/}
             </i>{' '}
             = {price * quantity} руб.
 
 
-            <span
-
-                onClick={() => removeFromBasket(id)}
-            >
-
+            <span onClick={() => removeFromBasket(id)}>
+             <i className="bi bi-trash-fill"></i>
             </span>
         </li>
     );

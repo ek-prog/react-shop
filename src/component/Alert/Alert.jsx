@@ -5,20 +5,20 @@ import React, { useEffect }  from "react";
 function Alert(props) {
     const { name = '', closeAlert = Function.prototype } = props;
 
-    useEffect(() => {
+
+    useEffect(()=>{
         const timerId = setTimeout(closeAlert, 3000);
-
-        return () => {
-            console.log('Alert');
-            clearTimeout(timerId);
-        };
-        // eslint-disable-next-line
+        return() =>{clearTimeout(timerId)};
+        //eslint-disable-next-line
     }, [name]);
-
-    return (
-        <div id='toast-container'>
-            <div className='toast'>{name} добавлен в корзину</div>
-        </div>
-    );
+        return(
+            <div className="position-fixed top-50 end-0 translate-middle-y p-3 divAlert" >
+                <div id="liveToast" className=" hide" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div className="toast-body">
+                        {name} добавлен в корзину
+                    </div>
+                </div>
+            </div>
+        )
 }
 export default Alert;
